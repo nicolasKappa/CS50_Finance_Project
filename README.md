@@ -125,7 +125,7 @@ This project is a web-based email system where users can register, log in, send,
    - flask run
 
 
-** The application should now be accessible at `http://127.0.0.1:5000/`.
+*The application should now be accessible at `http://127.0.0.1:5000/`.*
 
 ---
 
