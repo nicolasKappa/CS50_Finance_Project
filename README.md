@@ -6,6 +6,19 @@
 
 ---
 
+## **Table of Contents**
+1. [Project Overview](#project-overview)
+2. [Key Features](#key-features)
+3. [Walkthrough](#walkthrough)
+4. [File Structure](#file-structure)
+5. [Technologies Used](#technologies-used)
+6. [Installation Instructions](#installation-instructions)
+7. [Future Improvements](#future-improvements)
+8. [Contributing](#contributing)
+9. [License](#license)
+
+---
+
 ## **Project Overview**
 This project is a web-based email system where users can register, log in, send, and receive emails. The website includes error handling, session management, and database integration. Error messages are displayed in a fun and interactive way using cat memes.
 
@@ -91,3 +104,54 @@ This project is a web-based email system where users can register, log in, send,
 - **MySQL**: Relational database for storing user and email data.
 - **Flask Session**: For managing user sessions.
 - **Werkzeug**: Security library for password hashing.
+
+---
+
+## **Installation Instructions**
+
+1. Clone this repository:
+   - git clone <your-repo-link>
+
+2. Navigate to the project directory:
+   - cd cs50_finance_project
+
+3. Install the required dependencies:
+   - pip install -r requirements.txt
+     
+4. Set up the MySQL database:
+   - flask db init flask db migrate flask db upgrade
+
+5. Run the application:
+   - flask run
+
+
+The application should now be accessible at `http://127.0.0.1:5000/`.
+
+---
+
+## **Future Improvements**
+
+- Implement a search feature for users to easily find specific emails.
+- Add two-factor authentication for enhanced security.
+- Include email attachments functionality.
+- Improve the user interface for a more modern, sleek look.
+
+---
+
+## **Contributing**
+
+Contributions are welcome! If you'd like to contribute, please:
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Commit your changes.
+4. Open a pull request with a description of what you've done.
+
+---
+
+## **License**
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+
+
+
