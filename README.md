@@ -1,29 +1,93 @@
-# CS50_Finance_Project
-This is a CS50 Final Project, Which I decided to Share.
-Project Name CS50
-#### Video Demo:  [https://www.youtube.com/watch?v%253DuogJL_Q7ORc]
-This is the final project of CS50x.
-I have used website for email where the user can enter with the url and check/send emails. The project has error handlings and it shows the corresponding error. The error
-message is showed with the cat meme for better interaction with the users. Following are the use cases and walkthrough how the website should be used. First the user need to
-register on the mail and log in with correct password and email.The email must include "@" to be acknowledged as an email. Otherwise the website will show that username is
-not available. If the error happens the cat meme will show up with the text that the username is not availabe. If one of the bar is empty or incorrect the website will show
-the error. Once user is logged in on private profile, she can send email with specific subject and textual email.If the email is already registered the webstite will not
-allow dublication. The error message will show that username is not available.She can also reveive email and see the specific time when she received and sent the email. In
-the end user can log out from the private profile and log in when she inteds to. The website saves the sent and received data on MYSQL relational database, therefor user will
-not lose the data on the website.
+# **CS50 Finance Project**
 
-The flask_Sessions is the file that helps with website link generating. Once the link is available user can comprehend the features the website offers.
-The static folder has file of styles.css. The file helps with graphical challendges such as font size, fort locaiton and etc.
-The Templates folder has different files for specific errr handlings or pages. The apology.html shows the cat meme for the error. The Compose.html gives ability to write the email where user wants so send the email as well as the text subject and text itself.
-The email.html helps with the homepage of email
-index. html has the hidden elements of homepage as well as layouts of email or passowrd
-the login.html give the interface of profile once the user is successfuly registered
-the regiter.html gives iterface for registration
-reply.html offers visuality for reply to specific email and sender.
-The app,py is the file where the main project is written.
-    from cs50 import SQL
-    from flask import Flask, flash, redirect, render_template, request, session
-    from flask_session import Session
-    from tempfile import mkdtemp
-    from werkzeug.security import check_password_hash, generate_password_hash
-It uses MySQL for the project.db file where the data is being stored, flask for generating the website link and session. tempfile for sepecific templates and werkzeug for security and password store means.
+*This is my final project for CS50x, which I decided to share with the community.*
+
+### **Video Demo**: [CS50 Final Project Demo](https://www.youtube.com/watch?v%253DuogJL_Q7ORc)
+
+---
+
+## **Project Overview**
+This project is a web-based email system where users can register, log in, send, and receive emails. The website includes error handling, session management, and database integration. Error messages are displayed in a fun and interactive way using cat memes.
+
+---
+
+## **Key Features**:
+*1. User Registration & Authentication:*
+   - Users can register with a valid email address (must include "@" symbol).
+   - A password is required, and the user must log in with their correct credentials.
+   - If a user tries to register with an already registered email or invalid credentials, an error message with a cat meme will appear.
+
+*2. Email Management:*
+   - Once logged in, users can compose and send emails by specifying a subject and email body.
+   - Duplicate emails (same address) are not allowed, and an error will be shown.
+   - Users can receive emails, view messages, and see the time and date of sent or received emails.
+
+*3. Session Management:*
+   - Users can log in to their private profiles and stay logged in throughout the session.
+   - After finishing, they can log out and return at any time.
+   - Sessions ensure secure and personalized user experiences.
+
+*4. Error Handling:*
+   - The site provides various error messages for invalid inputs like missing fields, incorrect credentials, or duplicate registrations.
+   - Cat memes are used to display errors for better user interaction.
+
+*5. Database Management:*
+   - The project uses MySQL (`project.db`) to store user data, emails, and other information.
+   - Data is persistent, so users do not lose their emails or details when returning.
+
+---
+
+## **Walkthrough**:
+
+*1. Registration:*  
+   - Navigate to the registration page.  
+   - Provide a valid email and password.  
+   - If successful, the user is redirected to their private profile.  
+   - Errors like missing fields or an invalid email format will trigger a cat meme error message.
+
+*2. Logging In:*  
+   - Use the registered email and password to log in.  
+   - If credentials are invalid, an error message will appear.
+
+*3. Sending Emails:*  
+   - After logging in, users can compose a new email with a subject and body.  
+   - If the email address is already in the system, duplicate emails are not allowed.
+
+*4. Receiving Emails:*  
+   - Users can view incoming emails, check the timestamp, and reply.
+
+*5. Logging Out:*  
+   - Users can log out from their profile after use.  
+   - The session will securely end, and users can log back in when needed.
+
+---
+
+## **File Structure**:
+
+- `flask_Sessions.py`:  
+   *Handles session management and URL generation for the website.*
+
+- `static/styles.css`:  
+   *Handles the graphical aspects of the website, such as fonts and layouts.*
+
+- `templates/`:  
+   *Contains various HTML files for different pages and error handling, including:*
+   - `apology.html`: Displays cat meme error messages.
+   - `compose.html`: Allows users to compose new emails.
+   - `email.html`: Displays the homepage for email functionality.
+   - `index.html`: Contains the hidden elements for email layout.
+   - `login.html`: Interface for user login.
+   - `register.html`: Interface for new user registration.
+   - `reply.html`: Visual interface for replying to emails.
+
+- `app.py`:  
+   *Main file that contains the project logic. Uses Flask for web framework, MySQL for data storage, and various libraries like Werkzeug for security.*
+
+---
+
+## **Technologies Used**:
+
+- **Flask**: Web framework for handling routes and rendering pages.
+- **MySQL**: Relational database for storing user and email data.
+- **Flask Session**: For managing user sessions.
+- **Werkzeug**: Security library for password hashing.
